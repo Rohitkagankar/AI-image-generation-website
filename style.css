@@ -19,7 +19,7 @@
 }
 .image-generator ::before{
     content: "";
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     top: 0;
     width: 100%;
@@ -32,7 +32,7 @@
     padding: 0 15px;
     max-width: 760px;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 .image-generator h1{
     font-size: 2.5rem;
@@ -51,18 +51,21 @@
     padding: 6px;
     margin: 45px 0 15px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: #fff;
     border-radius: 30px;
+    /* position: relative; */
 }
 .image-generator .prompt-input{
-    width: 100%;
+    width: 5000%;
     height: 100%;
     font-size: 1rem;
     outline: none;
     border: none;
     background: none;
-    padding: 0 17px;
+    margin-left: 0;
+    
+    /* position: relative; */
 }
 .generate-form .controls{
     display: flex;
@@ -74,15 +77,17 @@
     border: none;
     background: none;
     font-size: 1rem;
+    
 }
 .generate-form .generate-btn{
     font-size: 1rem;
     outline: none;
     border: none;
     color: #fff;
+    font-size: 1rem;
     font-weight: 500;
     padding: 0 25px;
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 30px;
     background: #0381ef;
 }
@@ -92,7 +97,7 @@
     flex-wrap: wrap;
     padding: 0 15px;
     max-width: 1250px;
-    margin: 50px 0;
+    margin: 50px auto;
     justify-content: center;
     
 }
@@ -152,5 +157,26 @@
         margin-top: 15px;
         align-items: center;
         justify-content: flex-end;
+    }
+    .generate-form .img-quantity {
+        color: #fff;
+    }
+    .generate-form .img-quantity option{
+        color: #000;
+    }
+    .generate-form .generate-btn{
+        height: 100%;
+        margin-bottom: .5rem;
+    }
+    .image-gallery .img-card:not(.loading) .download-btn{
+        display: flex;
+    }
+    .image-gallery{
+        margin-top: 20px;
+    }
+}
+@media secreen and (max-width: 550px){
+    .image-gallery .img-card{
+        width: 100%;
     }
 }
