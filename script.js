@@ -1,4 +1,15 @@
 const generateForm=document.querySelector(".generate-form");
+const imageGallery=document.querySelector(".image-gallery");
+
+
+const generateAiImage = async (userPrompt,userImgQuantity) =>{
+    try{
+        const response = await fetch("")
+    }catch(error){
+        console.log(error);
+    }
+}
+
 
 const handleFormSubmission=(e) =>{
     e.preventDefault();
@@ -17,7 +28,8 @@ const handleFormSubmission=(e) =>{
         </div>`
     ).join("");
     
-    console.log(imgCardMarkup);
+    imageGallery.innerHTML = imgCardMarkup;
+    generateAiImage(userPrompt,userImgQuantity);
 }
 
 
